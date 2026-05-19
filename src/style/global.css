@@ -50,7 +50,7 @@ body {
   line-height: 1.6;
   background-color: var(--background-color);
   scrollbar-width: auto;
-  scrollbar-color: var(--primary-color) var(--secondary-color);
+  scrollbar-color: var(--primary-color) var(--secondary-color) !important;
 }
 
 h1, h2, h3 {
