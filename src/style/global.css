@@ -48,6 +48,7 @@
 html {
   scrollbar-width: auto;
   scrollbar-color: var(--primary-color) var(--secondary-color) !important;
+  scrollbar-gutter: stable;
 }
 
 body {
