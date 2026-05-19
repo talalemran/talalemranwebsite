@@ -55,6 +55,7 @@ h1, h2, h3 {
   color: var(--text-color);
   font-family: var(--thirdary-font);
   line-height: 1.2;
+  margin-bottom: 1rem;
 }
 
 h1 {
