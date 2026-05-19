@@ -225,7 +225,7 @@ main {
 
 .tags {
   margin-left: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
   line-height: 1.2;
 }
 
@@ -301,7 +301,7 @@ footer a {
 
   .tags{
     font-size: 1.2rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1.2rem;
   }
 
   .icons {
