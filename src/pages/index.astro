@@ -1,0 +1,125 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Layout from "../layouts/Layout.astro";
+import Ava from "../assets/01.jpg";
+import Canada from "../assets/discovercanada-small.webp";
+import MyOldWebsite from "../assets/myoldwebsite-small.webp";
+import SuperTire from "../assets/supertire-small.webp";
+const pageTitle = "Talal Emran - Web Designer & Developer";
+const pageDescription =
+    "Welcome to my personal website. I am a web designer, developer, graphic designer, and photographer with over 10 years of experience.";
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+    <Header />
+    <div>
+        <main>
+            <p class="center">
+                <img
+                    src={Ava.src}
+                    alt="Talal Emran"
+                    width="500px"
+                    style="border-radius: 5%; width: 300px; height: 337px; object-fit: cover;"
+                />
+            </p>
+            <h1>
+                Talal Emran, Web Designer, Developer, Graphic Designer and
+                Photographer
+            </h1>
+            <p>
+                Hi 👋, my name is Talal Emran. I'm a web designer and
+                photographer. I have been doing website development for more
+                than 10 years.
+            </p>
+            <p>
+                My goal is to create a website that is easy to use and looks
+                great. I have experience in HTML, CSS, JavaScript, and
+                WordPress.
+            </p>
+            <p>
+                In addition to web design, I also have a passion for
+                photography.
+            </p>
+            <br />
+            <hr />
+            <h2>Last Projects</h2>
+            <p>
+                <ul class="list-none">
+                    <li>
+                        <i class="fa-brands fa-wordpress-simple"></i>
+                        <a href="https://www.upnorthhub.com" target="_blank"
+                            >UpNorthHub</a>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-html5"></i>
+                        <a href="https://maestrobarbershop.ca/" target="_blank"
+                            >Maestro Barbershop</a>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-wordpress-simple"></i>
+                        <a
+                            href="https://www.mostlogicstudio.com"
+                            target="_blank">Most Logic Studio</a>
+                    </li>
+                </ul>
+            </p>
+            <br />
+            <hr />
+            <!-- <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <img src={MyOldWebsite.src} alt="My Old Website">
+                <h3>My Old Website</h3>
+                <p>This is the old version of my website, so I need to update it as well to be nice look.</p>
+                <p><a href="https://myoldwebsite77.netlify.app/" title="Go to My Old Website" target="_blank" class="btn1"><i class="fa-solid fa-arrow-up-right-from-square"></i></a> <a href="https://github.com/talalemran" title="Go to My Old Website Github" target="_blank" class="btn1"><i class="fa-brands fa-github"></i></a></p>
+            </div>
+            <div class="portfolio-item">
+                <img src={SuperTire.src} alt="Super Tire">
+                <h3>Super Tire</h3>
+                <p>Web project for Super Tire Auto tire installation based in Ottawa, Ontario.</p>
+                <p><a href="https://supertire.netlify.app/" title="Go to Super Tire" target="_blank" class="btn1"><i class="fa-solid fa-arrow-up-right-from-square"></i></a> <a href="https://github.com/talalemran" title="Go to Super Tire Website Github" target="_blank" class="btn1"><i class="fa-brands fa-github"></i></a></p>
+            </div>
+            <div class="portfolio-item">
+                <img src={Canada.src} alt="Discover Canada">
+                <h3>Discover Canada</h3>
+                <p>Web project about Canada contains: a little Canadian information and gallery.</p>
+                <p><a href="https://discovercanada.netlify.app/" title="Go to Discover Canada" target="_blank" class="btn1"><i class="fa-solid fa-arrow-up-right-from-square"></i></a> <a href="https://github.com/talalemran" title="Go to Discover Canada Github" target="_blank" class="btn1"><i class="fa-brands fa-github"></i></a></p>
+            </div>
+        </div> -->
+            <h2>Skills</h2>
+            <!-- <p class="icons">
+        <i class="fa-brands fa-linux fa-xl"></i>
+        <i class="fa-brands fa-html5"></i>
+        <i class="fa-brands fa-css3-alt"></i>
+        <i class="fa-brands fa-js"></i>
+        <i class="fa-brands fa-node-js"></i>
+        <i class="fa-brands fa-wordpress-simple"></i>
+        <i class="fa-solid fa-cart-shopping"></i>
+        <i class="fa-brands fa-cpanel"></i>
+        <i class="fa-solid fa-camera"></i>
+      </p>-->
+            <p>
+                <ul class="list-none">
+                    <li><i class="fa-brands fa-linux"></i> GNU/Linux OS</li>
+                    <li><i class="fa-brands fa-html5"></i> HTML</li>
+                    <li>
+                        <i class="fa-brands fa-css3-alt"></i> Cascading Style Sheets,
+                        CSS
+                    </li>
+                    <li><i class="fa-brands fa-js"></i> Javascript</li>
+                    <li><i class="fa-brands fa-node-js"></i> Node JS</li>
+                    <li>
+                        <i class="fa-brands fa-wordpress-simple"></i> Wordpress
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-cart-shopping"></i> E-commerce
+                    </li>
+                    <li><i class="fa-brands fa-cpanel"></i> cPanel</li>
+                    <li><i class="fa-solid fa-camera"></i> Photography</li>
+                </ul>
+            </p>
+            <br />
+        </main>
+    </div>
+    <Footer />
+</Layout>

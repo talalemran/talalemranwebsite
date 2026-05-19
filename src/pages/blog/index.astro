@@ -1,0 +1,26 @@
+---
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+
+const posts: CollectionEntry<'blog'>[] = (await getCollection('blog')).sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
+---
+
+<Layout title="Blog" description="A list of blog posts">
+<Header />
+ <main>
+   <h1>Blog</h1>
+   <ul>
+     {posts.map((post: CollectionEntry<'blog'>) => (
+       <li>{post.data.pubDate.toLocaleDateString()}: 
+         <a href={`/blog/${post.slug}`}>
+           {post.data.title}
+         </a>
+       </li>
+     ))}
+   </ul>
+  </main>
+<Footer />
+</Layout>

@@ -1,0 +1,40 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Layout from './Layout.astro';
+import type { CollectionEntry } from 'astro:content';
+
+type Props = CollectionEntry<'blog'>;
+
+const { data, render } = Astro.props;
+const { title, description, pubDate, updatedDate, tags } = data;
+const { Content } = await render();
+
+const formattedDate = new Date(pubDate).toLocaleDateString();
+const formattedUpdatedDate = updatedDate ? new Date(updatedDate).toLocaleDateString() : undefined;
+---
+
+<Layout title={title} description={description}>
+  <Header />
+  <main>
+    <article class="prose">
+      <h1>{title}</h1>
+      <p>Published: {formattedDate}</p>
+      {formattedUpdatedDate && <p>Updated: {formattedUpdatedDate}</p>}
+      {tags && (
+        <div>
+          <ul>
+            <li class="list-none list-inline tags">Tags:</li>
+            {tags.map((tag: string) => (
+              <li class="list-none list-inline tags">
+                <a href={`/tags/${tag}`}>{tag}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+      <Content />
+    </article>
+  </main>
+  <Footer />
+</Layout>

@@ -1,0 +1,38 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Layout from '../layouts/Layout.astro';
+const pageTitle = "Talal Emran - Contact Me";
+const pageDescription = "Get in touch with Talal Emran, a web designer and developer based in Ottawa, Canada. Reach out for web design, development, and digital marketing services.";
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+    <Header/>
+    <div>
+    <main>
+        <h1>Contact Me ✉️</h1>
+        <p>This is my contact information where you can find me. Feel free to reach me at any time if you have a question.</p>
+      <hr>
+        <br>
+        <h2>Contact Info</h2>
+        <ul>
+            <li>My Name: Talal Emran</li>
+            <li>E-mail: talal_emran[@]yahoo.com</li>
+            <li>Phone: 613-255-5585</li>
+        </ul>
+
+        <hr>
+        <br>
+        <h2>Where You Can Find Me</h2>
+        <ul class="list-none">
+                <li><i class="fa-brands fa-github"></i> <a href="https://github.com/talalemran" target="_blank">Github</a></li>
+                <li><i class="fa-brands fa-codepen"></i> <a href="https://codepen.io/talalemran" target="_blank">Code Pen</a></li>
+                <li><i class="fa-brands fa-dev"></i> <a href="https://dev.to/talalemran" target="_blank">Dev</a></li>
+                <li><i class="fa-brands fa-x-twitter"></i> <a href="https://x.com/talalemran" target="_blank">X - Twitter</a></li>
+                <li><i class="fa-brands fa-instagram"></i> <a href="https://www.instagram.com/talalemran/" target="_blank">Instagram</a></li>
+                <li><i class="fa-brands fa-tiktok"></i> <a href="https://www.tiktok.com/@talalemran" target="_blank">Tik Tok</a></li>
+            </ul>
+  </main>
+</div>
+<Footer/>
+</Layout>

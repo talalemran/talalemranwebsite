@@ -1,0 +1,331 @@
+@font-face { 
+    font-family: "Azeret Mono"; 
+    src: url("fonts/AzeretMono-Regular.ttf");
+    font-weight:700%;
+    font-display: swap;
+  }
+
+@font-face { 
+    font-family: "Yanone Kaffeesatz", sans-serif;
+    src: url("fonts/YanoneKaffeesatz-VariableFont_wght.ttf");
+    font-weight:700%;
+    font-display: swap;
+  }
+
+:root {
+  --primary-color: #27548A;
+  --secondary-color: #DDA853;
+  --tertiary-color: #f0d2a2;
+  --background-color: #F3F3E0;
+  --text-color: #183B4E;
+  --primary-font: system-ui, sans-serif;
+  --secondary-font: 'Azeret Mono', monospace;
+  --tertiary-font: 'Yanone Kaffeesatz', sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--secondary-color); 
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color); 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-color); 
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--primary-font);
+  line-height: 1.6;
+  background-color: var(--background-color);
+}
+
+h1, h2, h3 {
+  margin-bottom: 1rem;  
+  color: var(--text-color);
+  font-family: var(--thirdary-font);
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+p {
+  color: var(--text-color);
+  font-size: 1.3rem;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.center {
+  text-align: center;
+}
+
+main li {
+  margin-left: 30px;
+  font-size: 1.3rem;
+  color: var(--text-color);
+  list-style: square;
+}
+
+.list-none li{
+  list-style-type: none;
+}
+
+.list-inline {
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+.btn1 {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.btn1:hover {
+  background-color: var(--text-color);
+  color: var(--background-color);
+}
+
+header {
+  padding: 1rem 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  background-color: var(--primary-color);
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+  font-family: var(--thirdary-font);
+}
+
+.logo ::before {
+  content:'</TE> '
+}
+
+.logo a {
+  text-decoration: none;
+  color: var(--background-color);
+  font-weight: bold;
+  text-shadow: 3px 1px 1px var(--primary-color);
+}
+
+.logo a:hover {
+  text-decoration: underline;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--tertiary-font);
+  font-size: 1.3rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--background-color);
+  font-weight: bold;
+  text-shadow: 3px 1px 1px var(--primary-color);
+
+
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 2rem;
+  max-width: 1000px;
+  width: 90%;
+  margin: 3rem auto;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  line-height: 1.8;
+}
+
+.icons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: var(--secondary-color);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+.icons i {
+  font-size: 3rem;
+  color: var(--background-color);
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.portfolio-item {
+    border: 1px solid var(--primary-color);
+    padding: 15px;
+    text-align: center;
+}
+
+.portfolio-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.tags {
+  margin-left: 0;
+  margin-bottom: 2rem;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 1.3rem;
+  width: 100%;
+  margin: 0 auto;
+  background-color: var(--primary-color);
+}
+
+footer p {
+  color: var(--background-color);
+  margin: 0.5rem 0;
+}
+
+footer a {
+  color: var(--background-color);
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  font-size: 2rem;
+}
+
+.footer-icons a {
+  color: var(--background-color);
+}
+
+.footer-decoration {
+  position: relative;
+  bottom: -19px;
+}
+
+@media (max-width: 600px) {
+  h1 {
+  font-size: 1.8rem;
+  }
+
+  h2 {
+  font-size: 1.6rem;
+  }
+
+  h3 {
+  font-size: 1.4rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+  main li {
+    font-size: 1.2rem;
+  }
+  
+  img {
+    width: 100%;
+    height: auto;
+  }
+  
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .tags{
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .icons {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .icons i {
+    font-size: 2rem;
+  }
+
+  .footer-icons {
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 1.5rem;
+  }
+  
+  pre.shiki, pre.astro-code, code {
+  padding: 1rem;
+  font-size: 1.2rem;
+  }
+}
+
+/* Dracula theme customizations */
+pre.shiki, pre.astro-code {
+  padding: 2rem;
+  font-size: 1.3rem;
+}
+
+.shiki.dracula {
+  --shiki-color-text: #f8f8f2;
+  --shiki-color-background: #282a36;
+  --shiki-color-comment: #6272a4;
+}

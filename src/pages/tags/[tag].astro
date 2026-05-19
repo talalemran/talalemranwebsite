@@ -1,0 +1,38 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { getCollection } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  const tags = new Set(posts.flatMap(post => post.data.tags || []));
+  return Array.from(tags).map(tag => ({
+    params: { tag },
+  }));
+}
+
+interface Props {
+  tag: string;
+}
+
+const { tag } = Astro.params as Props;
+const posts = await getCollection('blog');
+const filteredPosts = posts.filter(post => post.data.tags?.includes(tag));
+---
+
+<Layout title={`Tag: ${tag}`} description={`Posts tagged with ${tag}`}>
+  <Header />
+  <main>
+    <h1>Tag: {tag}</h1>
+    <ul>
+      {filteredPosts.map((post: CollectionEntry<'blog'>) => (
+        <li>
+          <a href={`/blog/${post.slug}`}>{post.data.title}</a>
+        </li>
+      ))}
+    </ul>
+  </main>
+  <Footer />
+</Layout>
