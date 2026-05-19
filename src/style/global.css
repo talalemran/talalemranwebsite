@@ -226,6 +226,7 @@ main {
 .tags {
   margin-left: 0;
   margin-bottom: 1rem;
+  line-height: 1.2;
 }
 
 footer {
