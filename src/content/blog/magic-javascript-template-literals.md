@@ -6,7 +6,7 @@ tags:
   - JavaScript
   - JavaScript tips
   - JavaScript tutorial
-  - ui/ux design
+  - ui-ux design
   - web development
 ---
 
