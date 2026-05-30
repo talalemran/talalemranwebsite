@@ -87,7 +87,7 @@ a {
 
 p {
   color: var(--text-color);
-  font-size: 1.6rem;
+  font-size: 1.4rem;
 }
 
 a:hover {
@@ -100,7 +100,7 @@ a:hover {
 
 main li {
   margin-left: 30px;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   color: var(--text-color);
   list-style: square;
 }
