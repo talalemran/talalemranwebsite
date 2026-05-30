@@ -1,6 +1,6 @@
 ---
 title: UI/UX & Code - The Magic of JavaScript Template Literals
-description: VS Code extensions I use as a web developer are highly recommended and they are very essential.
+description: This blog post is about the UI/UX & code - the magic of javaScript template literals.
 pubDate: 05-29-2026
 tags:
   - JavaScript
