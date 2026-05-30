@@ -16,9 +16,11 @@ tags:
 
 Have you ever tried to glue text and variables together in JavaScript? If you are using the old-school plus signs (+), you know it can get messy very quickly.
 
+<br />
+
 Today, we are going to look at a clean, elegant way to handle text inside your code using a feature called Template Literals. It’s a game-changer for keeping your code organized and readable.
 
-
+<br />
 
 ## The Old, Messy Way
 
@@ -40,9 +42,15 @@ console.log(message);
 
 It works, but keeping track of those quotation marks and spacing is a headache. If you miss one single space, your text runs together like Alexand I am.
 
+<br />
+
 ## The New, Clean Way: Template Literals
 
+<br />
+
 Instead of fighting with plus signs, JavaScript lets us use backticks (`)—the key usually found right below the Escape key on your keyboard—and a special syntax: ${variable}.
+
+<br />
 
 Here is the exact same message written the modern way:
 
@@ -83,5 +91,7 @@ const cardHTML = `
 ### Give it a Try!
 
 The next time you need to mix variables into your UI text or layout strings, drop the quotes, reach for the backticks, and keep your code beautiful.
+
+<br />
 
 Happy coding!
