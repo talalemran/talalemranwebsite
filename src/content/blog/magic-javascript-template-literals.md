@@ -46,6 +46,8 @@ Instead of fighting with plus signs, JavaScript lets us use backticks (`)—the 
 
 Here is the exact same message written the modern way:
 
+<br />
+
 ```js
 const name = "Alex";
 const role = "Developer";
@@ -55,6 +57,8 @@ const message = `Hello, my name is ${name} and I am a ${role}.`;
 
 console.log(message);
 ```
+<br />
+
 ### Why This is a Game-Changer
 
 <ul>
@@ -74,6 +78,8 @@ const cardHTML = `
   </div>
 `;
 ```
+<br />
+
 ### Give it a Try!
 
 The next time you need to mix variables into your UI text or layout strings, drop the quotes, reach for the backticks, and keep your code beautiful.
