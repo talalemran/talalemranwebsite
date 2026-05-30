@@ -23,13 +23,9 @@ In this particular post, I will show how to achieve that.
 
 You want to include something in your web page like header and footer. The benefit of doing that is to save your time and work. The advantage of this method is to edit a single file instead of many files within your website.
 
-<br />
-
 In your HTML files add these elements:
 
-<br />
-
-## Header Content:
+### Header Content:
 
 ```html
 <!-- This is the header section -->
@@ -37,13 +33,14 @@ In your HTML files add these elements:
 ```
 <br />
 
-## Footer Content:
+### Footer Content:
 
 ```html
 <!-- This is the footer section -->
 <footer id=”footer”></footer>
 ```
 <br />
+
 Now you can add the header and footer content using pure JavaScript:
 
 <br />
@@ -67,9 +64,8 @@ You can add many elements as you need in your header and footer sections.
 
 This method is not helpful for the Search Engine Optimization because the code in the JavaScript file is not injected in the web page. So, the search engine bot does not see the elements that you included in the web page.
 
-<br />
-
 However, this way of including elements is for a fast solution if you do not want to use any of JavaScript libraries.
+
 I hope this trick is helpful for you web development job. And that is it.
 
 See you later 👋
