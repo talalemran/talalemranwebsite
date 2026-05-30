@@ -29,16 +29,21 @@ In your HTML files add these elements:
 
 <br />
 
+## Header Content:
+
 ```html
 <!-- This is the header section -->
 <header id=”header”></header>
-<header id="header"></header>
-<!-- This is the footer section -->
-<footer id=”footer”></footer>
-<footer id="footer"></footer>
 ```
 <br />
 
+## Footer Content:
+
+```html
+<!-- This is the footer section -->
+<footer id=”footer”></footer>
+```
+<br />
 Now you can add the header and footer content using pure JavaScript:
 
 <br />
