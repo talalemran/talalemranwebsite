@@ -322,6 +322,8 @@ footer a {
   .tags{
     font-size: 1.2rem;
     margin-bottom: 1.2rem;
+    text-align: justify;
+    text-justify: inter-character;
   }
 
   .icons {
