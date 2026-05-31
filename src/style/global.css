@@ -326,7 +326,7 @@ footer a {
     text-justify: inter-character;
   }
 
-  .tags li {
+  .tags li a{
     font-size: 1.2rem;
     text-align: justify;
     text-justify: inter-character;
