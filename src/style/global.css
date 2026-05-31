@@ -275,16 +275,19 @@ footer a {
   h1 {
   font-size: 1.8rem;
   text-align: justify;
+  text-justify: inter-character;
   }
 
   h2 {
   font-size: 1.6rem;
   text-align: justify;
+  text-justify: inter-character;
   }
 
   h3 {
   font-size: 1.4rem;
   text-align: justify;
+  text-justify: inter-character;
   }
 
   p {
@@ -297,6 +300,8 @@ footer a {
   }
   main li {
     font-size: 1.2rem;
+    text-align: justify;
+    text-justify: inter-character;
   }
   
   img {
