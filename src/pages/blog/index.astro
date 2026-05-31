@@ -13,15 +13,79 @@ const posts: CollectionEntry<'blog'>[] = (await getCollection('blog')).sort((a, 
  <main>
    <h1>Blog</h1>
    <p>Welcome to my blog! Here you'll find a collection of my thoughts, experiences, and insights on various topics. I hope you find something interesting to read!</p>
-   <ul>
-     {posts.map((post: CollectionEntry<'blog'>) => (
-       <li>{post.data.pubDate.toLocaleDateString()}: 
-         <a href={`/blog/${post.slug}`}>
-           {post.data.title}
-         </a>
-       </li>
-     ))}
-   </ul>
+   <div class="posts-grid">
+  {posts.map((post: CollectionEntry<'blog'>) => (
+    <div class="post-card">
+      <h3 class="post-title">
+        <a href={`/blog/${post.slug}`}>
+          {post.data.title}
+        </a>
+      </h3>
+      
+      <time class="post-date">
+        {post.data.pubDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+      </time>
+    </div>
+  ))}
+</div>
   </main>
 <Footer />
 </Layout>
+
+<style>
+
+  :root {
+  --primary-color: #27548A;
+  --secondary-color: #DDA853;
+  --tertiary-color: #f0d2a2;
+  --background-color: #F3F3E0;
+  --text-color: #183B4E;
+  --primary-font: system-ui, sans-serif;
+  --secondary-font: 'Azeret Mono', monospace;
+  --tertiary-font: 'Yanone Kaffeesatz', sans-serif;
+}
+
+  .posts-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    padding: 20px 0;
+  }
+
+  .post-card {
+    border: 2px dashed var(--secondary-color);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 160px;
+  }
+
+  .post-title {
+    margin: 0 0 12px 0;
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1.4;
+  }
+
+  .post-title a {
+    color: var(--primary-color);
+    text-decoration: none;
+  }
+
+  .post-title a:hover {
+    text-decoration: underline;
+  }
+
+  .post-date {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-top: auto;
+  }
+
+  @media (max-width: 640px) {
+    .posts-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
