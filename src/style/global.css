@@ -274,18 +274,24 @@ footer a {
 @media (max-width: 600px) {
   h1 {
   font-size: 1.8rem;
+  text-align: justify;
   }
 
   h2 {
   font-size: 1.6rem;
+  text-align: justify;
   }
 
   h3 {
   font-size: 1.4rem;
+  text-align: justify;
   }
 
   p {
     font-size: 1.2rem;
+  }
+
+  main p {
     text-align: justify;
   }
   main li {
