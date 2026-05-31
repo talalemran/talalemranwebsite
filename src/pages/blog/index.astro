@@ -12,6 +12,7 @@ const posts: CollectionEntry<'blog'>[] = (await getCollection('blog')).sort((a, 
 <Header />
  <main>
    <h1>Blog</h1>
+   <p>Welcome to my blog! Here you'll find a collection of my thoughts, experiences, and insights on various topics. I hope you find something interesting to read!</p>
    <ul>
      {posts.map((post: CollectionEntry<'blog'>) => (
        <li>{post.data.pubDate.toLocaleDateString()}: 
