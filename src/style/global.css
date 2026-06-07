@@ -12,6 +12,20 @@
     font-display: swap;
   }
 
+
+@font-face { 
+    font-family: "Plus Jakarta Sans", sans-serif;
+    src: url("fonts/PlusJakartaSans-VariableFont_wght.ttf");
+    font-weight:700%;
+    font-display: swap;
+  }
+
+@font-face { 
+    font-family: "Inter", sans-serif;
+    src: url("fonts/Inter-VariableFont_opsz,wght.ttf");
+    font-weight:700%;
+    font-display: swap;
+  }
 :root {
   --primary-color: #27548A;
   --secondary-color: #DDA853;
@@ -19,8 +33,8 @@
   --background-color: #F3F3E0;
   --text-color: #183B4E;
   --primary-font: system-ui, sans-serif;
-  --secondary-font: 'Azeret Mono', monospace;
-  --tertiary-font: 'Yanone Kaffeesatz', sans-serif;
+  --secondary-font: "Plus Jakarta Sans", sans-serif;
+  --tertiary-font: 'Inter', sans-serif;
 }
 
 ::-webkit-scrollbar {
@@ -52,14 +66,14 @@ html {
 }
 
 body {
-  font-family: var(--primary-font) !important;
+  font-family: var(--tertiary-font) !important;
   line-height: 1.6;
   background-color: var(--background-color);
 }
 
 h1, h2, h3 {
   color: var(--text-color);
-  font-family: var(--thirdary-font) !important;
+  font-family: var(--secondary-font) !important;
   line-height: 1.2;
   margin-bottom: 1rem;
 }
@@ -143,7 +157,7 @@ header {
 .logo {
   font-size: 1.6rem;
   font-weight: bold;
-  font-family: var(--thirdary-font);
+  font-family: var(--secondary-font);
 }
 
 .logo ::before {
