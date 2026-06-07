@@ -16,6 +16,7 @@
 @font-face { 
     font-family: "Plus Jakarta Sans", sans-serif;
     src: url("fonts/PlusJakartaSans-Bold.ttf");
+    font-weight: 1000;
     font-display: swap;
   }
 
