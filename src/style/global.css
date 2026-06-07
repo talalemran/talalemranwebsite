@@ -52,14 +52,14 @@ html {
 }
 
 body {
-  font-family: var(--primary-font);
+  font-family: var(--primary-font) !important;
   line-height: 1.6;
   background-color: var(--background-color);
 }
 
 h1, h2, h3 {
   color: var(--text-color);
-  font-family: var(--thirdary-font);
+  font-family: var(--thirdary-font) !important;
   line-height: 1.2;
   margin-bottom: 1rem;
 }
