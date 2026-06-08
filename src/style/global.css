@@ -131,7 +131,7 @@ main li {
 
 .list-inline li{
   display: inline;
-  margin-right: 0.5rem;
+  padding: 1rem;
 }
 
 .list-border li {
