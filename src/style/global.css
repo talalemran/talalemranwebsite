@@ -35,6 +35,8 @@
   --primary-font: system-ui, sans-serif;
   --secondary-font: "Plus Jakarta Sans", sans-serif;
   --tertiary-font: 'Inter', sans-serif;
+  --first-font: Monospace, sans-serif;
+  --second-font: sans-serif;
 }
 
 ::-webkit-scrollbar {
@@ -66,19 +68,19 @@ html {
 }
 
 body {
-  font-family: var(--tertiary-font) !important;
+  font-family: var(--second-font);
   line-height: 1.6;
   background-color: var(--background-color);
 }
 
 h1, h2, h3 {
   color: var(--text-color);
-  font-family: var(--secondary-font) !important;
+  font-family: var(--second-font);
   line-height: 1.2;
   margin-bottom: 1rem;
   text-align: justify;
   text-justify: inter-character;
-  font-weight: 200% !important;
+  font-weight: 200%;
 }
 
 h1 {
