@@ -162,7 +162,8 @@ header {
 .logo {
   font-size: 1.6rem;
   font-weight: bold;
-  font-family: var(--secondary-font);
+  font-family: var(--first-font);
+  text-transform: uppercase;
 }
 
 .logo ::before {
@@ -199,6 +200,7 @@ nav ul li a {
   color: var(--background-color);
   font-weight: bold;
   text-shadow: 3px 1px 1px var(--primary-color);
+  text-transform: uppercase;
 
 
 }
