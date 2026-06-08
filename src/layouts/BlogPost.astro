@@ -10,8 +10,19 @@ const { data, render } = Astro.props;
 const { title, description, pubDate, updatedDate, tags } = data;
 const { Content } = await render();
 
-const formattedDate = new Date(pubDate).toLocaleDateString();
-const formattedUpdatedDate = updatedDate ? new Date(updatedDate).toLocaleDateString() : undefined;
+// Configuration object for "Month DD, YYYY" format
+const dateOptions: Intl.DateTimeFormatOptions = {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+};
+
+// Updated date formatting
+const formattedDate = new Date(pubDate).toLocaleDateString('en-US', dateOptions);
+
+const formattedUpdatedDate = updatedDate 
+  ? new Date(updatedDate).toLocaleDateString('en-US', dateOptions) 
+  : undefined;
 ---
 
 <Layout title={title} description={description}>
