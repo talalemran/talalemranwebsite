@@ -80,7 +80,7 @@ h1, h2, h3 {
   margin-bottom: 1rem;
   text-align: justify;
   text-justify: inter-character;
-  font-weight: 200%;
+  font-weight: bold;
 }
 
 h1 {
