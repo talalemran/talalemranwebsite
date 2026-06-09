@@ -33,7 +33,6 @@ const formattedUpdatedDate = updatedDate
       <p>Published: {formattedDate}</p>
       {formattedUpdatedDate && <p>Updated: {formattedUpdatedDate}</p>}
       {tags && (
-        <div>
           <ul class="list-none list-inline">
             <li class="list-none list-inline tags">Tags:</li>
             {tags.map((tag: string) => (
@@ -42,7 +41,6 @@ const formattedUpdatedDate = updatedDate
               </li>
             ))}
           </ul>
-        </div>
       )}
       <br />
       <Content />
