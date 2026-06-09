@@ -125,11 +125,11 @@ main li {
   list-style: square;
 }
 
-.list-none li{
+.list-none li {
   list-style-type: none;
 }
 
-.list-inline li{
+.list-inline li {
   display: inline;
   padding: 4rem;
   margin-bottom: 2rem;
