@@ -202,7 +202,7 @@ const recentPosts = (await getCollection('blog'))
     .service-card {
         text-align: center;
         padding: 2rem 1rem;
-        background-color: white;
+        background-color: rgba(255, 255, 255, 0.5);
         border-radius: 12px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
         transition: transform 0.2s ease;
@@ -217,6 +217,7 @@ const recentPosts = (await getCollection('blog'))
     }
     .service-card h3 {
         margin-bottom: 0.5rem;
+        text-align: center;
     }
     .service-card p {
         font-size: 1rem;
@@ -237,6 +238,7 @@ const recentPosts = (await getCollection('blog'))
     }
     .project-card h3 {
         margin-bottom: 0.75rem;
+        text-align: center;
     }
     .project-card p {
         font-size: 1rem;
@@ -281,10 +283,12 @@ const recentPosts = (await getCollection('blog'))
     .post-card h3 {
         margin-bottom: 0.5rem;
         font-size: 1.3rem;
+        text-align: center;
     }
     .post-card time {
         font-size: 0.9rem;
         color: #666;
+        text-align: center;
     }
 
     .contact-cta {
