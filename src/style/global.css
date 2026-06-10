@@ -79,8 +79,6 @@ h1, h2, h3 {
   font-family: var(--main-font);
   line-height: 1.2;
   margin-bottom: 1rem;
-  text-align: justify;
-  text-justify: inter-character;
   font-weight: bold;
 }
 
@@ -303,34 +301,22 @@ footer a {
 @media (max-width: 600px) {
   h1 {
   font-size: 1.8rem;
-  text-align: justify;
-  text-justify: inter-character;
   }
 
   h2 {
   font-size: 1.6rem;
-  text-align: justify;
-  text-justify: inter-character;
   }
 
   h3 {
   font-size: 1.4rem;
-  text-align: justify;
-  text-justify: inter-character;
   }
 
   p {
     font-size: 1.2rem;
   }
 
-  main p {
-    text-align: justify;
-    text-justify: inter-character;
-  }
   main li {
     font-size: 1.2rem;
-    text-align: justify;
-    text-justify: inter-character;
   }
   
   img {
@@ -351,14 +337,10 @@ footer a {
   .tags{
     font-size: 1.2rem;
     margin-bottom: 1.2rem;
-    text-align: justify;
-    text-justify: inter-character;
   }
 
   .tags li a{
     font-size: 1.2rem;
-    text-align: justify;
-    text-justify: inter-character;
   }
 
   .icons {
