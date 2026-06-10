@@ -1,7 +1,7 @@
 ---
 title: VS code Extensions I Use 📄
 description: VS Code extensions I use as a web developer are highly recommended and they are very essential.
-pubDate: 02-20-2025
+pubDate: 2025-02-20
 tags:
   - VS Code
   - extensions

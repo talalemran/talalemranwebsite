@@ -1,7 +1,7 @@
 ---
 title: 3 factors for designing a distinctive website that you can do simply
 description: This is an article about 3 factors for designing a distinctive website that you can do simply.
-pubDate: 04-18-2026
+pubDate: 2026-04-18
 tags:
   - web design
   - web development

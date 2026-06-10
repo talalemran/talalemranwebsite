@@ -1,7 +1,7 @@
 ---
 title: How to include a component with Vanilla JavaScript
 description: This article is about how to include a component with Vanilla JavaScript such as header and footer.
-pubDate: 08-23-2025
+pubDate: 2025-08-23
 tags:
   - JavaScript
   - JavaScript tips

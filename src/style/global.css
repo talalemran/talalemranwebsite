@@ -1,14 +1,14 @@
 @font-face { 
     font-family: "Azeret Mono"; 
-    src: url("fonts/AzeretMono-Regular.ttf");
-    font-weight:700%;
+    src: url("fonts/AzeretMono-VariableFont_wght.ttf");
+    font-weight: 700;
     font-display: swap;
   }
 
 @font-face { 
     font-family: "Yanone Kaffeesatz", sans-serif;
     src: url("fonts/YanoneKaffeesatz-VariableFont_wght.ttf");
-    font-weight:700%;
+    font-weight: 700;
     font-display: swap;
   }
 
@@ -23,7 +23,7 @@
 @font-face { 
     font-family: "Inter", sans-serif;
     src: url("fonts/Inter-VariableFont_opsz,wght.ttf");
-    font-weight:700%;
+    font-weight: 700;
     font-display: swap;
   }
 :root {
