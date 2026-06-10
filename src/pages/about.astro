@@ -2,6 +2,7 @@
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import Layout from "../layouts/Layout.astro";
+import Ava from "../assets/01.jpg";
 const pageTitle = "Talal Emran - About Me";
 const pageDescription =
     "Learn more about Talal Emran, a web designer and developer with over 10 years of experience in web design, development, graphic design, and photography.";
@@ -11,183 +12,243 @@ const pageDescription =
     <Header />
     <div>
         <main>
-            <header class="page-header">
-                <h1>About Me, Web Designer and developer</h1>
-                <p class="intro-text">
-                    I'm a full media designer and developer for your business with
-                    all kind of solutions.
-                </p>
-            </header>
+            <div class="profile-banner">
+                <div class="banner-bg"></div>
+                <div class="profile-card">
+                    <img src={Ava.src} alt="Talal Emran" class="profile-img" />
+                    <h1>About Me, Web Designer and developer</h1>
+                    <p class="intro-text">
+                        I'm a full media designer and developer for your business with
+                        all kind of solutions.
+                    </p>
+                </div>
+            </div>
 
-            <section class="card">
-                <div class="card-icon"><i class="fa-solid fa-user"></i></div>
-                <h2>Who am I</h2>
-                <p>
-                    My name is Talal Emran, I'm a web designer and developer based
-                    in Ottawa, Canada. you are here because you want more about me
-                    and my interstes.
-                </p>
-            </section>
+            <div class="content-grid">
+                <div class="col">
+                    <section class="who-am-i">
+                        <span class="section-number">01</span>
+                        <h2>Who am I</h2>
+                        <p>
+                            My name is Talal Emran, I'm a web designer and developer based
+                            in Ottawa, Canada. you are here because you want more about me
+                            and my interstes.
+                        </p>
+                    </section>
 
-            <section class="card">
-                <div class="card-icon"><i class="fa-solid fa-heart"></i></div>
-                <h2>My Interests</h2>
-                <p>
-                    Read and discuss the world history is one of my favorite
-                    interests. Also, I collect stamps and coins for most of the
-                    world countries. I like to watch the soccer games.
-                </p>
-            </section>
+                    <section class="interests">
+                        <span class="section-number">02</span>
+                        <h2>My Interests</h2>
+                        <p>
+                            Read and discuss the world history is one of my favorite
+                            interests. Also, I collect stamps and coins for most of the
+                            world countries. I like to watch the soccer games.
+                        </p>
+                    </section>
 
-            <section class="card">
-                <div class="card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
-                <h2>Education</h2>
-                <ul class="timeline">
-                    <li>Computer Operation: Syrian Institution - 1994</li>
-                    <li>MS Word, Excel, Access: Almamoon Institution - 1997</li>
-                    <li>
-                        Interactive Multimedia Program: Algonquin College - 2008
-                    </li>
-                    <li>HTML, CSS, JavaScript: Sololearn - 2021</li>
-                </ul>
-            </section>
+                    <section class="working">
+                        <span class="section-number">03</span>
+                        <h2>Working</h2>
+                        <div class="work-item">
+                            <span class="work-year">2005 - 2008</span>
+                            <p>Alrofaee Graphics</p>
+                        </div>
+                        <div class="work-item">
+                            <span class="work-year">2008 - Now</span>
+                            <p>
+                                <a
+                                    href="https://www.mostlogicstudio.com/"
+                                    title="Go to Most Logic Studio"
+                                    target="_blank">Most Logic Studio</a
+                                >
+                            </p>
+                        </div>
+                    </section>
+                </div>
 
-            <section class="card">
-                <div class="card-icon"><i class="fa-solid fa-wrench"></i></div>
-                <h2>Skills</h2>
-                <ul class="skill-tags">
-                    <li>Linux OS</li>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>Javascript</li>
-                    <li>Wordpress</li>
-                    <li>Adobe Photoshop</li>
-                    <li>DSLR Photography</li>
-                    <li>Digital Marketing</li>
-                </ul>
-            </section>
+                <div class="col">
+                    <section class="education">
+                        <span class="section-number">04</span>
+                        <h2>Education</h2>
+                        <ul class="edu-list">
+                            <li><span class="edu-year">1994</span> Computer Operation: Syrian Institution</li>
+                            <li><span class="edu-year">1997</span> MS Word, Excel, Access: Almamoon Institution</li>
+                            <li><span class="edu-year">2008</span> Interactive Multimedia Program: Algonquin College</li>
+                            <li><span class="edu-year">2021</span> HTML, CSS, JavaScript: Sololearn</li>
+                        </ul>
+                    </section>
 
-            <section class="card">
-                <div class="card-icon"><i class="fa-solid fa-briefcase"></i></div>
-                <h2>Working</h2>
-                <ul class="timeline">
-                    <li>Alrofaee Graphics: 2005 - 2008</li>
-                    <li>
-                        <a
-                            href="https://www.mostlogicstudio.com/"
-                            title="Go to Most Logic Studio"
-                            target="_blank">Most Logic Studio</a
-                        > 2008 - Now
-                    </li>
-                </ul>
-            </section>
+                    <section class="skills">
+                        <span class="section-number">05</span>
+                        <h2>Skills</h2>
+                        <div class="skill-bars">
+                            <div class="skill-bar"><span>Linux OS</span><div class="bar"><div class="fill" style="width:85%"></div></div></div>
+                            <div class="skill-bar"><span>HTML</span><div class="bar"><div class="fill" style="width:95%"></div></div></div>
+                            <div class="skill-bar"><span>CSS</span><div class="bar"><div class="fill" style="width:90%"></div></div></div>
+                            <div class="skill-bar"><span>Javascript</span><div class="bar"><div class="fill" style="width:80%"></div></div></div>
+                            <div class="skill-bar"><span>Wordpress</span><div class="bar"><div class="fill" style="width:85%"></div></div></div>
+                            <div class="skill-bar"><span>Adobe Photoshop</span><div class="bar"><div class="fill" style="width:75%"></div></div></div>
+                            <div class="skill-bar"><span>DSLR Photography</span><div class="bar"><div class="fill" style="width:70%"></div></div></div>
+                            <div class="skill-bar"><span>Digital Marketing</span><div class="bar"><div class="fill" style="width:65%"></div></div></div>
+                        </div>
+                    </section>
+                </div>
+            </div>
         </main>
     </div>
     <Footer />
 </Layout>
 
 <style>
-    .page-header {
-        text-align: center;
-        padding: 2rem 1rem 3rem;
-        border-bottom: 3px dashed var(--secondary-color);
-        margin-bottom: 2rem;
+    .profile-banner {
+        position: relative;
+        margin-bottom: 3rem;
     }
-    .page-header h1 {
-        font-size: 2.5rem;
+    .banner-bg {
+        position: absolute;
+        inset: 0;
+        height: 220px;
+        background: linear-gradient(135deg, var(--primary-color), #1a365d);
+        border-radius: 20px;
+        z-index: 0;
+    }
+    .profile-card {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        padding: 3rem 2rem 2rem;
+    }
+    .profile-img {
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 4px solid white;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.2);
         margin-bottom: 1rem;
+    }
+    .profile-card h1 {
+        color: white;
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+        text-shadow: 0 2px 8px rgba(0,0,0,0.3);
     }
     .intro-text {
-        font-size: 1.3rem;
-        color: var(--primary-color);
-        font-weight: bold;
-        max-width: 600px;
+        color: rgba(255,255,255,0.9);
+        font-size: 1.15rem;
+        max-width: 500px;
         margin: 0 auto;
+        font-weight: 500;
     }
 
-    .card {
-        background-color: white;
-        border-radius: 16px;
-        padding: 2.5rem 2rem;
-        margin-bottom: 2rem;
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
-        transition: box-shadow 0.2s ease;
+    .content-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2.5rem;
     }
-    .card:hover {
-        box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
+
+    .col section {
+        margin-bottom: 2.5rem;
     }
-    .card-icon {
-        width: 56px;
-        height: 56px;
-        background-color: var(--secondary-color);
-        border-radius: 14px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 1.25rem;
+    .section-number {
+        font-size: 0.85rem;
+        font-weight: bold;
+        color: var(--secondary-color);
+        letter-spacing: 3px;
+        display: block;
+        margin-bottom: 0.25rem;
     }
-    .card-icon i {
-        font-size: 1.5rem;
-        color: white;
-    }
-    .card h2 {
+    .col h2 {
+        font-size: 1.8rem;
         margin-bottom: 1rem;
+        border-bottom: 3px solid var(--secondary-color);
+        padding-bottom: 0.5rem;
+        display: inline-block;
     }
-    .card p {
-        font-size: 1.2rem;
-        margin-bottom: 0;
+    .col p {
+        font-size: 1.15rem;
         line-height: 1.8;
     }
 
-    .timeline {
-        list-style: none;
-        padding: 0;
+    .work-item {
+        margin-bottom: 1.25rem;
+        padding: 1rem 1.25rem;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        border-left: 4px solid var(--secondary-color);
     }
-    .timeline li {
-        position: relative;
-        padding: 1rem 0 1rem 1.5rem;
-        border-left: 3px solid var(--secondary-color);
-        margin-left: 0.5rem;
-        font-size: 1.15rem;
-        color: var(--text-color);
-    }
-    .timeline li::before {
-        content: "";
-        position: absolute;
-        left: -7px;
-        top: 1.4rem;
-        width: 11px;
-        height: 11px;
-        background-color: var(--primary-color);
-        border-radius: 50%;
-        border: 2px solid white;
-    }
-    .timeline li:last-child {
-        border-left-color: transparent;
-    }
-
-    .skill-tags {
-        list-style: none;
-        padding: 0;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.75rem;
-    }
-    .skill-tags li {
-        background-color: var(--tertiary-color);
-        color: var(--text-color);
-        padding: 0.6rem 1.2rem;
-        border-radius: 50px;
-        font-size: 1rem;
+    .work-year {
+        font-size: 0.85rem;
         font-weight: bold;
-        border: 1px solid var(--secondary-color);
+        color: var(--primary-color);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        display: block;
+        margin-bottom: 0.25rem;
+    }
+    .work-item p {
+        font-size: 1.1rem;
+        margin-bottom: 0;
     }
 
-    @media (max-width: 600px) {
-        .page-header h1 { font-size: 1.8rem; }
-        .intro-text { font-size: 1.1rem; }
-        .card { padding: 1.5rem; }
-        .card p { font-size: 1.1rem; }
-        .skill-tags li { font-size: 0.9rem; padding: 0.5rem 1rem; }
+    .edu-list {
+        list-style: none;
+        padding: 0;
+    }
+    .edu-list li {
+        padding: 0.9rem 1.25rem;
+        margin-bottom: 0.75rem;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        font-size: 1.05rem;
+        color: var(--text-color);
+    }
+    .edu-year {
+        display: inline-block;
+        background-color: var(--primary-color);
+        color: white;
+        padding: 0.15rem 0.7rem;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: bold;
+        margin-right: 0.6rem;
+    }
+
+    .skill-bars {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .skill-bar span {
+        display: block;
+        font-size: 0.95rem;
+        font-weight: bold;
+        color: var(--text-color);
+        margin-bottom: 0.3rem;
+    }
+    .bar {
+        height: 12px;
+        background-color: #e0d6b8;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+    .fill {
+        height: 100%;
+        background: linear-gradient(90deg, var(--secondary-color), var(--primary-color));
+        border-radius: 20px;
+        transition: width 0.6s ease;
+    }
+
+    @media (max-width: 768px) {
+        .content-grid {
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+        .banner-bg { height: 180px; }
+        .profile-img { width: 100px; height: 100px; }
+        .profile-card h1 { font-size: 1.5rem; }
+        .col h2 { font-size: 1.5rem; }
     }
 </style>
