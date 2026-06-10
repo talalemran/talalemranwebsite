@@ -11,31 +11,38 @@ const pageDescription =
     <Header />
     <div>
         <main>
-            <h1>About Me, Web Designer and developer</h1>
-            <p>
-                I'm a full media designer and developer for your business with
-                all kind of solutions.
-            </p>
-            <br />
-            <h2>Who am I</h2>
-            <p>
-                My name is Talal Emran, I'm a web designer and developer based
-                in Ottawa, Canada. you are here because you want more about me
-                and my interstes.
-            </p>
-            <br />
+            <header class="page-header">
+                <h1>About Me, Web Designer and developer</h1>
+                <p class="intro-text">
+                    I'm a full media designer and developer for your business with
+                    all kind of solutions.
+                </p>
+            </header>
 
-            <h2>My Interests</h2>
-            <p>
-                Read and discuss the world history is one of my favorite
-                interests. Also, I collect stamps and coins for most of the
-                world countries. I like to watch the soccer games.
-            </p>
-            <br />
+            <section class="card">
+                <div class="card-icon"><i class="fa-solid fa-user"></i></div>
+                <h2>Who am I</h2>
+                <p>
+                    My name is Talal Emran, I'm a web designer and developer based
+                    in Ottawa, Canada. you are here because you want more about me
+                    and my interstes.
+                </p>
+            </section>
 
-            <h2>Education</h2>
-            <p>
-                <ul>
+            <section class="card">
+                <div class="card-icon"><i class="fa-solid fa-heart"></i></div>
+                <h2>My Interests</h2>
+                <p>
+                    Read and discuss the world history is one of my favorite
+                    interests. Also, I collect stamps and coins for most of the
+                    world countries. I like to watch the soccer games.
+                </p>
+            </section>
+
+            <section class="card">
+                <div class="card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                <h2>Education</h2>
+                <ul class="timeline">
                     <li>Computer Operation: Syrian Institution - 1994</li>
                     <li>MS Word, Excel, Access: Almamoon Institution - 1997</li>
                     <li>
@@ -43,12 +50,12 @@ const pageDescription =
                     </li>
                     <li>HTML, CSS, JavaScript: Sololearn - 2021</li>
                 </ul>
-            </p>
-            <br />
+            </section>
 
-            <h2>Skills</h2>
-            <p>
-                <ul>
+            <section class="card">
+                <div class="card-icon"><i class="fa-solid fa-wrench"></i></div>
+                <h2>Skills</h2>
+                <ul class="skill-tags">
                     <li>Linux OS</li>
                     <li>HTML</li>
                     <li>CSS</li>
@@ -58,12 +65,12 @@ const pageDescription =
                     <li>DSLR Photography</li>
                     <li>Digital Marketing</li>
                 </ul>
-            </p>
-            <br />
+            </section>
 
-            <h2>Working</h2>
-            <p>
-                <ul>
+            <section class="card">
+                <div class="card-icon"><i class="fa-solid fa-briefcase"></i></div>
+                <h2>Working</h2>
+                <ul class="timeline">
                     <li>Alrofaee Graphics: 2005 - 2008</li>
                     <li>
                         <a
@@ -73,9 +80,114 @@ const pageDescription =
                         > 2008 - Now
                     </li>
                 </ul>
-            </p>
-            <br />
+            </section>
         </main>
     </div>
     <Footer />
 </Layout>
+
+<style>
+    .page-header {
+        text-align: center;
+        padding: 2rem 1rem 3rem;
+        border-bottom: 3px dashed var(--secondary-color);
+        margin-bottom: 2rem;
+    }
+    .page-header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+    .intro-text {
+        font-size: 1.3rem;
+        color: var(--primary-color);
+        font-weight: bold;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .card {
+        background-color: white;
+        border-radius: 16px;
+        padding: 2.5rem 2rem;
+        margin-bottom: 2rem;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+        transition: box-shadow 0.2s ease;
+    }
+    .card:hover {
+        box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
+    }
+    .card-icon {
+        width: 56px;
+        height: 56px;
+        background-color: var(--secondary-color);
+        border-radius: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1.25rem;
+    }
+    .card-icon i {
+        font-size: 1.5rem;
+        color: white;
+    }
+    .card h2 {
+        margin-bottom: 1rem;
+    }
+    .card p {
+        font-size: 1.2rem;
+        margin-bottom: 0;
+        line-height: 1.8;
+    }
+
+    .timeline {
+        list-style: none;
+        padding: 0;
+    }
+    .timeline li {
+        position: relative;
+        padding: 1rem 0 1rem 1.5rem;
+        border-left: 3px solid var(--secondary-color);
+        margin-left: 0.5rem;
+        font-size: 1.15rem;
+        color: var(--text-color);
+    }
+    .timeline li::before {
+        content: "";
+        position: absolute;
+        left: -7px;
+        top: 1.4rem;
+        width: 11px;
+        height: 11px;
+        background-color: var(--primary-color);
+        border-radius: 50%;
+        border: 2px solid white;
+    }
+    .timeline li:last-child {
+        border-left-color: transparent;
+    }
+
+    .skill-tags {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+    }
+    .skill-tags li {
+        background-color: var(--tertiary-color);
+        color: var(--text-color);
+        padding: 0.6rem 1.2rem;
+        border-radius: 50px;
+        font-size: 1rem;
+        font-weight: bold;
+        border: 1px solid var(--secondary-color);
+    }
+
+    @media (max-width: 600px) {
+        .page-header h1 { font-size: 1.8rem; }
+        .intro-text { font-size: 1.1rem; }
+        .card { padding: 1.5rem; }
+        .card p { font-size: 1.1rem; }
+        .skill-tags li { font-size: 0.9rem; padding: 0.5rem 1rem; }
+    }
+</style>
