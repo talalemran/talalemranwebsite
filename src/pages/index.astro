@@ -114,10 +114,17 @@ const recentPosts = (await getCollection('blog'))
                 <h2>Latest Blog Posts</h2>
                 <div class="posts-grid">
                     {recentPosts.map((post) => (
-                        <div class="post-card">
-                            <h3><a href={`/blog/${post.slug}`}>{post.data.title}</a></h3>
-                            <time>{post.data.pubDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
-                        </div>
+                        <a href={`/blog/${post.slug}`} class="post-card">
+                            {post.data.heroImage && (
+                                <div class="post-thumb">
+                                    <img src={post.data.heroImage} alt="" loading="lazy" />
+                                </div>
+                            )}
+                            <div class="post-body">
+                                <h3>{post.data.title}</h3>
+                                <time>{post.data.pubDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+                            </div>
+                        </a>
                     ))}
                 </div>
                 <a href="/blog" class="view-all">Read all posts &rarr;</a>
@@ -272,19 +279,46 @@ const recentPosts = (await getCollection('blog'))
         gap: 1.5rem;
     }
     .post-card {
-        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
         background-color: rgba(255, 255, 255, 0.5);
         border-radius: 12px;
+        overflow: hidden;
+        text-decoration: none;
+        color: inherit;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        transition: box-shadow 0.2s ease, transform 0.2s ease;
     }
-    .post-card h3 {
+    .post-card:hover {
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        transform: translateY(-3px);
+    }
+    .post-thumb {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        overflow: hidden;
+        background-color: var(--tertiary-color);
+    }
+    .post-thumb img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .post-body {
+        padding: 1.25rem;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+    .post-body h3 {
         margin-bottom: 0.5rem;
-        font-size: 1.4rem;
     }
-    .post-card time {
-        font-size: 0.9rem;
+    .post-card:hover .post-body h3 {
+        color: var(--primary-color);
+    }
+    .post-body time {
+        margin-top: auto;
         color: #666;
-        text-align: center;
     }
 
     .contact-cta {
