@@ -11,21 +11,24 @@ const posts: CollectionEntry<'blog'>[] = (await getCollection('blog')).sort((a, 
 <Layout title="Blog" description="A list of blog posts">
 <Header />
  <main>
-   <h1>Blog</h1>
-   <p>Welcome to my blog! Here you'll find a collection of my thoughts, experiences, and insights on various topics. I hope you find something interesting to read!</p>
+     <h1>Blog</h1>
+     <p>Welcome to my blog! Here you'll find a collection of my thoughts, experiences, and insights on various topics. I hope you find something interesting to read!</p>
+
    <div class="posts-grid">
   {posts.map((post: CollectionEntry<'blog'>) => (
-    <div class="post-card">
-      <h3 class="post-title">
-        <a href={`/blog/${post.slug}`}>
-          {post.data.title}
-        </a>
-      </h3>
-      
-      <time class="post-date">
-        {post.data.pubDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
-      </time>
-    </div>
+    <a href={`/blog/${post.slug}`} class="post-card">
+      {post.data.heroImage && (
+        <div class="card-thumb">
+          <img src={post.data.heroImage} alt="" loading="lazy" />
+        </div>
+      )}
+      <div class="card-body">
+        <h2 class="post-title">{post.data.title}</h2>
+        <time class="post-date">
+          {post.data.pubDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+        </time>
+      </div>
+    </a>
   ))}
 </div>
   </main>
@@ -34,42 +37,61 @@ const posts: CollectionEntry<'blog'>[] = (await getCollection('blog')).sort((a, 
 
 <style>
 
+
   .posts-grid {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 24px;
-    padding: 20px 0;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    padding: 1.5rem 0;
   }
 
   .post-card {
-    border: 2px dashed var(--secondary-color);
-    padding: 24px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    min-height: 160px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid #e0d6b8;
+    border-radius: 8px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    transition: box-shadow 0.2s ease;
+  }
+  .post-card:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  }
+
+  .card-thumb {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background-color: var(--tertiary-color);
+    border-bottom: 1px solid #e0d6b8;
+  }
+  .card-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .card-body {
+    padding: 1.25rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
   }
 
   .post-title {
-    margin: 0 0 12px 0;
-    font-size: 1.4rem;
-    font-weight: 700;
+    font-size: 1.5rem;
+    margin: 0 0 0.75rem;
     line-height: 1.4;
   }
-
-  .post-title a {
+  .post-card:hover .post-title {
     color: var(--primary-color);
-    text-decoration: none;
-  }
-
-  .post-title a:hover {
-    text-decoration: underline;
   }
 
   .post-date {
-    font-size: 1.2rem;
-    color: var(--text-color);
     margin-top: auto;
+    color: #666;
   }
 
   @media (max-width: 640px) {

@@ -2,6 +2,7 @@
 title: Hello World! 👋
 description: Hello World, my first blog post here in my personal website profile.
 pubDate: 2025-02-16
+heroImage: /images/hello-world.webp
 tags:
   - hello world
   - blog

@@ -2,6 +2,7 @@
 title: UI/UX & Code - The Magic of JavaScript Template Literals
 description: This blog post is about the UI/UX & code - the magic of javaScript template literals.
 pubDate: 2026-05-29
+heroImage: /images/ux-ui-code.webp
 tags:
   - JavaScript
   - JavaScript tips

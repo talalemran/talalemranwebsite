@@ -5,6 +5,50 @@ import Layout from '../layouts/Layout.astro';
 
 const pageTitle = "Talal Emran - My Projects";
 const pageDescription = "Explore the projects by Talal Emran, a web designer and developer based in Ottawa, Canada. Discover innovative web design and development solutions.";
+const projects = [
+  {
+    title: "UpNorthHub",
+    desc: "A WordPress-powered website for a Northern Ontario business.",
+    url: "https://www.upnorthhub.com",
+    tech: "WordPress",
+  },
+  {
+    title: "Maestro Barbershop",
+    desc: "A modern website for a local barbershop in Ottawa.",
+    url: "https://maestrobarbershop.ca/",
+    tech: "HTML / CSS / JavaScript",
+  },
+  {
+    title: "Most Logic Studio",
+    desc: "A WordPress website for a creative studio.",
+    url: "https://www.mostlogicstudio.com",
+    tech: "WordPress",
+  },
+  {
+    title: "My Old Website",
+    desc: "Previous version of my personal website.",
+    url: "https://myoldwebsite77.netlify.app/",
+    tech: "HTML / CSS / JavaScript",
+  },
+  {
+    title: "Super Tire",
+    desc: "Web project for Super Tire Auto tire installation based in Ottawa, Ontario.",
+    url: "https://supertire.netlify.app/",
+    tech: "HTML / CSS / JavaScript",
+  },
+  {
+    title: "Discover Canada",
+    desc: "Web project about Canada with information and gallery.",
+    url: "https://discovercanada.netlify.app/",
+    tech: "HTML / CSS / JavaScript",
+  },
+  {
+    title: "Flex Fit",
+    desc: "Website project about Gym for Flex Fit in black and yellow color.",
+    url: "https://flexfit77.netlify.app/",
+    tech: "HTML / CSS / JavaScript",
+  },
+];
 ---
 
 <Layout title={pageTitle} description={pageDescription}>
@@ -13,53 +57,70 @@ const pageDescription = "Explore the projects by Talal Emran, a web designer and
     <main>
         <h1>My Projects</h1>
         <p>Here are some of my recent projects that I have worked on. I have experience in web design, development, graphic design, and photography.</p>
-        <h2>Web Design and Development Projects</h2>
-        <p>These are some of the web design and development projects that I have worked on recently. I have experience in HTML, CSS, JavaScript, and WordPress.</p>
-        <h3>Live Websites:</h3>
-        <p>
-        <ul class="list-none">
-            <li><i class="fa-brands fa-wordpress-simple"></i>  <a href="https://www.upnorthhub.com" target="_blank">UpNorthHub</a></li>
-            <li><i class="fa-brands fa-html5"></i>  <a href="https://maestrobarbershop.ca/" target="_blank">Maestro Barbershop</a></li>
-            <li><i class="fa-brands fa-wordpress-simple"></i>  <a href="https://www.mostlogicstudio.com" target="_blank">Most Logic Studio</a></li>
-        </ul>
-      </p>
-      <br />
-      <h3>Other Projects:</h3>
-         <p>
-            <ul class="list-none">
-                <li><i class="fa-brands fa-html5"></i>  <a href="https://myoldwebsite77.netlify.app/" target="_blank">My Old Website</a></li>
-                <li><i class="fa-brands fa-html5"></i>  <a href="https://supertire.netlify.app/" target="_blank">Super Tire</a></li>
-                <li><i class="fa-brands fa-html5"></i>  <a href="https://discovercanada.netlify.app/" target="_blank">Discover Canada</a></li>
-                <li><i class="fa-brands fa-html5"></i>  <a href="https://flexfit77.netlify.app/" target="_blank">Flex Fit</a></li>
-            </ul>
-         </p>
-        <!-- <div class="portfolio-grid">
-            <div class="portfolio-item">
-                <img src={MyOldWebsite.src} alt="My Old Website">
-                <h3>My Old Website</h3>
-                <p>This is the old version of my website, so I need to update it as well to be nice look.</p>
-                <p><a href="https://myoldwebsite77.netlify.app/" title="Go to My Old Website" target="_blank" class="btn1"><i class="fa-solid fa-arrow-up-right-from-square"></i></a> <a href="https://github.com/talalemran" title="Go to My Old Website Github" target="_blank" class="btn1"><i class="fa-brands fa-github"></i></a></p>
-            </div>
-            <div class="portfolio-item">
-                <img src={SuperTire.src} alt="Super Tire">
-                <h3>Super Tire</h3>
-                <p>Web project for Super Tire Auto tire installation based in Ottawa, Ontario.</p>
-                <p><a href="https://supertire.netlify.app/" title="Go to Super Tire" target="_blank" class="btn1"><i class="fa-solid fa-arrow-up-right-from-square"></i></a> <a href="https://github.com/talalemran" title="Go to Super Tire Github" target="_blank" class="btn1"><i class="fa-brands fa-github"></i></a></p>
-            </div>
-            <div class="portfolio-item">
-                <img src={Canada.src} alt="Discover Canada">
-                <h3>Discover Canada</h3>
-                <p>Web project about Canada contains: a little Canadian information and gallery.</p>
-                <p><a href="https://discovercanada.netlify.app/" title="Go to Discover Canada" target="_blank" class="btn1"><i class="fa-solid fa-arrow-up-right-from-square"></i></a> <a href="https://github.com/talalemran" title="Go to Discover Canada Github" target="_blank" class="btn1"><i class="fa-brands fa-github"></i></a></p>
-            </div>
-            <div class="portfolio-item">
-                <img src={Flex.src} alt="Flex Fit">
-                <h3>Flex Fit</h3>
-                <p>Website project about Gym for Flex Fit in black and yellow color.</p>
-                <p><a href="https://flexfit77.netlify.app/" title="Go to Flex Fit" target="_blank" class="btn1"><i class="fa-solid fa-arrow-up-right-from-square"></i></a> <a href="https://github.com/talalemran" title="Go to Flex Fit Github" target="_blank" class="btn1"><i class="fa-brands fa-github"></i></a></p>
-            </div>
-        </div> -->
+
+        <div class="project-grid">
+            {projects.map((p) => (
+                <a href={p.url} target="_blank" class="project-block">
+                    <div class="block-bar"></div>
+                    <div class="block-body">
+                        <h2>{p.title}</h2>
+                        <p>{p.desc}</p>
+                        <span class="block-tech">{p.tech}</span>
+                    </div>
+                </a>
+            ))}
+        </div>
     </main>
 </div>
 <Footer/>
 </Layout>
+
+<style>
+    .project-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+    .project-block {
+        display: block;
+        text-decoration: none;
+        color: inherit;
+        border: 1px solid #e0d6b8;
+        border-radius: 8px;
+        overflow: hidden;
+        transition: box-shadow 0.2s ease;
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+    .project-block:hover {
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    }
+    .block-bar {
+        height: 4px;
+        background-color: var(--secondary-color);
+    }
+    .block-body {
+        padding: 1.25rem;
+    }
+    .project-block h2 {
+        margin-bottom: 0.4rem;
+        border: none;
+        padding: 0;
+        display: block;
+    }
+    .project-block p {
+        margin-bottom: 0.75rem;
+    }
+    .block-tech {
+        font-weight: bold;
+        color: var(--primary-color);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    @media (max-width: 768px) {
+        .project-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>

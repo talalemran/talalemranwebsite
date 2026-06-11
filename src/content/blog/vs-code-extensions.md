@@ -2,6 +2,7 @@
 title: VS code Extensions I Use 📄
 description: VS Code extensions I use as a web developer are highly recommended and they are very essential.
 pubDate: 2025-02-20
+heroImage: /images/vscode.webp
 tags:
   - VS Code
   - extensions
