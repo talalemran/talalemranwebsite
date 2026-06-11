@@ -97,16 +97,27 @@ const recentPosts = (await getCollection('blog'))
 
             <section class="skills">
                 <h2>Skills &amp; Technologies</h2>
-                <div class="icons-grid">
-                    <div class="skill-item"><i class="fa-brands fa-linux"></i><span>Linux</span></div>
-                    <div class="skill-item"><i class="fa-brands fa-html5"></i><span>HTML5</span></div>
-                    <div class="skill-item"><i class="fa-brands fa-css3-alt"></i><span>CSS3</span></div>
-                    <div class="skill-item"><i class="fa-brands fa-js"></i><span>JavaScript</span></div>
-                    <div class="skill-item"><i class="fa-brands fa-node-js"></i><span>Node.js</span></div>
-                    <div class="skill-item"><i class="fa-brands fa-wordpress-simple"></i><span>WordPress</span></div>
-                    <div class="skill-item"><i class="fa-solid fa-cart-shopping"></i><span>E-commerce</span></div>
-                    <div class="skill-item"><i class="fa-brands fa-cpanel"></i><span>cPanel</span></div>
-                    <div class="skill-item"><i class="fa-solid fa-camera"></i><span>Photography</span></div>
+                <div class="icons-scroll">
+                    <div class="icons-track">
+                        <i class="fa-brands fa-linux"></i>
+                        <i class="fa-brands fa-html5"></i>
+                        <i class="fa-brands fa-css3-alt"></i>
+                        <i class="fa-brands fa-js"></i>
+                        <i class="fa-brands fa-node-js"></i>
+                        <i class="fa-brands fa-wordpress-simple"></i>
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <i class="fa-brands fa-cpanel"></i>
+                        <i class="fa-solid fa-camera"></i>
+                        <i class="fa-brands fa-linux"></i>
+                        <i class="fa-brands fa-html5"></i>
+                        <i class="fa-brands fa-css3-alt"></i>
+                        <i class="fa-brands fa-js"></i>
+                        <i class="fa-brands fa-node-js"></i>
+                        <i class="fa-brands fa-wordpress-simple"></i>
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <i class="fa-brands fa-cpanel"></i>
+                        <i class="fa-solid fa-camera"></i>
+                    </div>
                 </div>
             </section>
 
@@ -144,34 +155,43 @@ const recentPosts = (await getCollection('blog'))
     .hero {
         text-align: center;
         padding: 3rem 1rem 2rem;
+        background: linear-gradient(135deg, var(--primary-color), #1a365d);
+        border-radius: 20px;
+    }
+
+    .hero h1 {
+        color: var(--background-color);
     }
     .avatar {
         border-radius: 50%;
         width: 200px;
         height: 200px;
         object-fit: cover;
+        border: 4px solid white;
         margin-bottom: 1.5rem;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     }
     .tagline {
         font-size: 1.8rem;
-        color: var(--primary-color);
+        color: var(--background-color);
         font-weight: bold;
         margin-bottom: 0.5rem;
     }
     .subtitle {
         max-width: 600px;
         margin: 0 auto 1.5rem;
+        color: var(--background-color);
     }
     .cta-buttons {
         display: flex;
         gap: 1rem;
         justify-content: center;
         flex-wrap: wrap;
+        font-size: 1.3rem;
     }
     .btn-secondary {
-        background-color: transparent;
-        border: 2px solid var(--primary-color);
+        background-color: var(--background-color);
+        border: 2px solid var(--background-color);
         color: var(--primary-color);
     }
     .btn-secondary:hover {
@@ -249,28 +269,27 @@ const recentPosts = (await getCollection('blog'))
         margin-bottom: 1.25rem;
     }
 
-    .icons-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
-        gap: 1.5rem;
-        padding: 2rem;
+    .icons-scroll {
+        overflow: hidden;
         background-color: var(--secondary-color);
         border-radius: 12px;
+        padding: 1.5rem 0;
     }
-    .skill-item {
+    .icons-track {
         display: flex;
-        flex-direction: column;
+        gap: 3rem;
         align-items: center;
-        gap: 0.5rem;
+        width: max-content;
+        animation: scroll 20s linear infinite;
     }
-    .skill-item i {
-        font-size: 2.2rem;
+    .icons-track i {
+        font-size: 3rem;
         color: var(--background-color);
     }
-    .skill-item span {
-        font-size: 0.85rem;
-        color: var(--background-color);
-        font-weight: bold;
+
+    @keyframes scroll {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
     }
 
     .posts-grid {
@@ -343,13 +362,13 @@ const recentPosts = (await getCollection('blog'))
         color: var(--text-color) !important;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
         .hero { padding: 2rem 1rem; }
         .avatar { width: 150px; height: 150px; }
         .services-grid { grid-template-columns: 1fr; }
         .projects-grid { grid-template-columns: 1fr; }
         .posts-grid { grid-template-columns: 1fr; }
-        .icons-grid { grid-template-columns: repeat(3, 1fr); gap: 1rem; padding: 1.5rem; }
-        .skill-item i { font-size: 1.8rem; }
+        .icons-scroll { padding: 1rem 0; }
+        .icons-track i { font-size: 2.2rem; }
     }
 </style>
