@@ -1,0 +1,47 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "404 - Page Not Found";
+const pageDescription = "The page you are looking for does not exist.";
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+    <Header />
+    <div>
+        <main>
+            <div class="not-found">
+                <span class="error-code">404</span>
+                <h1>Page Not Found</h1>
+                <p>The page you are looking for does not exist or has been moved.</p>
+                <a href="/" class="btn1">Go Home</a>
+            </div>
+        </main>
+    </div>
+    <Footer />
+</Layout>
+
+<style>
+    .not-found {
+        text-align: center;
+        padding: 4rem 1rem;
+    }
+    .error-code {
+        font-size: 6rem;
+        font-weight: bold;
+        color: var(--secondary-color);
+        line-height: 1;
+        display: block;
+        margin-bottom: 1rem;
+    }
+    .not-found h1 {
+        margin-bottom: 1rem;
+    }
+    .not-found p {
+        margin-bottom: 2rem;
+        max-width: 450px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
