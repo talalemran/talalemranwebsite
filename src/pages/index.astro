@@ -3,21 +3,14 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import Layout from "../layouts/Layout.astro";
 import Ava from "../assets/01.jpg";
-import { getCollection } from 'astro:content';
-import type { CollectionEntry } from 'astro:content';
 
 const pageTitle = "Talal Emran - Web Designer & Developer";
 const pageDescription =
     "Welcome to my personal website. I am a web designer, developer, graphic designer, and photographer with over 10 years of experience.";
-
-const recentPosts = (await getCollection('blog'))
-    .sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
-    .slice(0, 3);
 ---
 
 <Layout title={pageTitle} description={pageDescription} image="/favicon.jpg">
-
-<script type="application/ld+json" set:html={JSON.stringify({
+    <script type="application/ld+json" set:html={JSON.stringify({
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Talal Emran",
@@ -34,353 +27,112 @@ const recentPosts = (await getCollection('blog'))
     <Header />
     <div>
         <main>
-            <section class="hero">
+            <p class="center">
                 <img
                     src={Ava.src}
-                    alt="Talal Emran"
-                    class="avatar"
+                    alt="Talal Emran - Web Designer and Developer"
+                    width="500"
+                    style="border-radius: 5%; width: 300px; height: 337px; object-fit: cover;"
                     fetchpriority="high"
                 />
-                <h1 class="center">Talal Emran</h1>
-                <p class="tagline">Web Designer, Developer &amp; Photographer</p>
-                <p class="subtitle">
-                    I create modern, responsive websites that help your business grow online.
-                </p>
-                <div class="cta-buttons">
-                    <a href="/projects" class="btn1">My Projects</a>
-                    <a href="/contact-me" class="btn1 btn-secondary">Contact Me</a>
-                </div>
-
-            <section class="about-summary">
-                <h2>About Me</h2>
-                <p>
-                    I'm a full media designer and developer with over 10 years of experience
-                    in web design, development, graphic design, and photography. I specialize
-                    in creating user-friendly websites that are both beautiful and functional.
-                </p>
-                <a href="/about" class="view-all">Learn more about me &rarr;</a>
-            </section>
-
-            <section class="services">
-                <h2>What I Do</h2>
-                <div class="services-grid">
-                    <div class="service-card">
-                        <i class="fa-solid fa-laptop-code"></i>
-                        <h3>Web Design</h3>
-                        <p>Modern, responsive designs tailored to your brand and audience.</p>
-                    </div>
-                    <div class="service-card">
-                        <i class="fa-solid fa-code"></i>
-                        <h3>Web Development</h3>
-                        <p>Clean, efficient code using the latest technologies and best practices.</p>
-                    </div>
-                    <div class="service-card">
-                        <i class="fa-solid fa-paintbrush"></i>
-                        <h3>Graphic Design</h3>
-                        <p>Eye-catching visuals, logos, and branding materials for your business.</p>
-                    </div>
-                    <div class="service-card">
-                        <i class="fa-solid fa-camera"></i>
-                        <h3>Photography</h3>
-                        <p>Professional photography services for products, events, and portraits.</p>
-                    </div>
-                </div>
-            </section>
-
-            <section class="featured-projects">
-                <h2>Featured Projects</h2>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <h3>UpNorthHub</h3>
-                        <p>A WordPress-powered website for Ontario business.</p>
-                        <a href="https://www.upnorthhub.com" target="_blank" rel="noopener noreferrer" class="btn1">Visit Site</a>
-                    </div>
-                    <div class="project-card">
-                        <h3>Maestro Barbershop</h3>
-                        <p>A modern website for a local barbershop in Ottawa.</p>
-                        <a href="https://maestrobarbershop.ca/" target="_blank" rel="noopener noreferrer" class="btn1">Visit Site</a>
-                    </div>
-                    <div class="project-card">
-                        <h3>Most Logic Studio</h3>
-                        <p>A WordPress website for a creative studio.</p>
-                        <a href="https://www.mostlogicstudio.com" target="_blank" rel="noopener noreferrer" class="btn1">Visit Site</a>
-                    </div>
-                </div>
-                <a href="/projects" class="view-all">View all projects &rarr;</a>
-            </section>
-
-            <section class="skills">
-                <h2>Skills &amp; Technologies</h2>
-                <div class="icons-scroll">
-                    <div class="icons-track">
-                        <i class="fa-brands fa-linux"></i>
-                        <i class="fa-brands fa-html5"></i>
-                        <i class="fa-brands fa-css3-alt"></i>
-                        <i class="fa-brands fa-js"></i>
-                        <i class="fa-brands fa-node-js"></i>
+            </p>
+            <h1>
+                Talal Emran, Web Designer, Developer, Graphic Designer and
+                Photographer
+            </h1>
+            <p>
+                Hi 👋, my name is Talal Emran. I'm a web designer and
+                photographer. I have been doing website development for more
+                than 10 years.
+            </p>
+            <p>
+                My goal is to create a website that is easy to use and looks
+                great. I have experience in HTML, CSS, JavaScript, and
+                WordPress.
+            </p>
+            <p>
+                In addition to web design, I also have a passion for
+                photography.
+            </p>
+            <br />
+            <hr />
+            <br />
+            <h2>Last Projects</h2>
+            <p>
+                <ul class="list-none">
+                    <li>
                         <i class="fa-brands fa-wordpress-simple"></i>
-                        <i class="fa-solid fa-cart-shopping"></i>
-                        <i class="fa-brands fa-cpanel"></i>
-                        <i class="fa-solid fa-camera"></i>
-                        <i class="fa-brands fa-linux"></i>
+                        <a href="https://www.upnorthhub.com" target="_blank" rel="noopener noreferrer"
+                            >UpNorthHub</a
+                        >
+                    </li>
+                    <li>
                         <i class="fa-brands fa-html5"></i>
-                        <i class="fa-brands fa-css3-alt"></i>
-                        <i class="fa-brands fa-js"></i>
-                        <i class="fa-brands fa-node-js"></i>
+                        <a href="https://maestrobarbershop.ca/" target="_blank" rel="noopener noreferrer"
+                            >Maestro Barbershop</a
+                        >
+                    </li>
+                    <li>
                         <i class="fa-brands fa-wordpress-simple"></i>
-                        <i class="fa-solid fa-cart-shopping"></i>
-                        <i class="fa-brands fa-cpanel"></i>
-                        <i class="fa-solid fa-camera"></i>
-                    </div>
-                </div>
-            </section>
-
-            <section class="latest-posts">
-                <h2>Latest Blog Posts</h2>
-                <div class="posts-grid">
-                    {recentPosts.map((post) => (
-                        <a href={`/blog/${post.slug}`} class="post-card">
-                            {post.data.heroImage && (
-                                <div class="post-thumb">
-                                    <img src={post.data.heroImage} alt={post.data.title} loading="lazy" />
-                                </div>
-                            )}
-                            <div class="post-body">
-                                <h3>{post.data.title}</h3>
-                                <time>{post.data.pubDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
-                            </div>
-                        </a>
-                    ))}
-                </div>
-                <a href="/blog" class="view-all">Read all posts &rarr;</a>
-            </section>
-
-            <section class="contact-cta">
-                <h2>Let's Work Together</h2>
-                <p>Have a project in mind? I'd love to hear about it.</p>
-                <a href="/contact-me" class="btn1">Get in Touch</a>
-            </section>
+                        <a
+                            href="https://www.mostlogicstudio.com"
+                            target="_blank" rel="noopener noreferrer">Most Logic Studio</a
+                        >
+                    </li>
+                </ul>
+            </p>
+            <br />
+            <hr />
+            <br />
+            <!-- <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <img src={MyOldWebsite.src} alt="My Old Website">
+                <h3>My Old Website</h3>
+                <p>This is the old version of my website, so I need to update it as well to be nice look.</p>
+                <p><a href="https://myoldwebsite77.netlify.app/" title="Go to My Old Website" target="_blank" class="btn1"><i class="fa-solid fa-arrow-up-right-from-square"></i></a> <a href="https://github.com/talalemran" title="Go to My Old Website Github" target="_blank" class="btn1"><i class="fa-brands fa-github"></i></a></p>
+            </div>
+            <div class="portfolio-item">
+                <img src={SuperTire.src} alt="Super Tire">
+                <h3>Super Tire</h3>
+                <p>Web project for Super Tire Auto tire installation based in Ottawa, Ontario.</p>
+                <p><a href="https://supertire.netlify.app/" title="Go to Super Tire" target="_blank" class="btn1"><i class="fa-solid fa-arrow-up-right-from-square"></i></a> <a href="https://github.com/talalemran" title="Go to Super Tire Website Github" target="_blank" class="btn1"><i class="fa-brands fa-github"></i></a></p>
+            </div>
+            <div class="portfolio-item">
+                <img src={Canada.src} alt="Discover Canada">
+                <h3>Discover Canada</h3>
+                <p>Web project about Canada contains: a little Canadian information and gallery.</p>
+                <p><a href="https://discovercanada.netlify.app/" title="Go to Discover Canada" target="_blank" class="btn1"><i class="fa-solid fa-arrow-up-right-from-square"></i></a> <a href="https://github.com/talalemran" title="Go to Discover Canada Github" target="_blank" class="btn1"><i class="fa-brands fa-github"></i></a></p>
+            </div>
+        </div> -->
+            <h2>Skills</h2>
+            <p class="icons">
+        <i class="fa-brands fa-linux fa-xl"></i>
+        <i class="fa-brands fa-html5"></i>
+        <i class="fa-brands fa-css3-alt"></i>
+        <i class="fa-brands fa-js"></i>
+        <i class="fa-brands fa-node-js"></i>
+        <i class="fa-brands fa-wordpress-simple"></i>
+        <i class="fa-solid fa-cart-shopping"></i>
+        <i class="fa-brands fa-cpanel"></i>
+        <i class="fa-solid fa-camera"></i>
+      </p>
+            <!-- <p>
+                <ul class="list-none list-inline list-border">
+                    <li><i class="fa-brands fa-linux"></i> GNU/Linux OS</li>
+                    <li><i class="fa-brands fa-html5"></i> HTML</li>
+                    <li><i class="fa-brands fa-css3-alt"></i> CSS</li>
+                    <li><i class="fa-brands fa-js"></i> Javascript</li>
+                    <li><i class="fa-brands fa-node-js"></i> Node JS</li>
+                    <li>
+                        <i class="fa-brands fa-wordpress-simple"></i> Wordpress
+                    </li>
+                    <li><i class="fa-solid fa-cart-shopping"></i> E-commerce</li>
+                    <li><i class="fa-brands fa-cpanel"></i> cPanel</li>
+                    <li><i class="fa-solid fa-camera"></i> Photography</li>
+                </ul>
+            </p> -->
+            <br />
         </main>
     </div>
     <Footer />
 </Layout>
-
-<style>
-    .hero {
-        text-align: center;
-        padding: 3rem 1rem 2rem;
-        background: linear-gradient(135deg, var(--primary-color), #1a365d);
-        border-radius: 20px;
-        margin-bottom: 3rem;
-    }
-
-    .hero h1 {
-        color: var(--background-color);
-    }
-    .avatar {
-        border-radius: 50%;
-        width: 200px;
-        height: 200px;
-        object-fit: cover;
-        border: 4px solid white;
-        margin-bottom: 1.5rem;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    }
-    .tagline {
-        color: var(--background-color);
-        font-weight: bold;
-        margin-bottom: 0.5rem;
-    }
-    .subtitle {
-        max-width: 600px;
-        margin: 0 auto 1.5rem;
-        color: var(--background-color);
-    }
-    .cta-buttons {
-        display: flex;
-        gap: 1rem;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-    .btn-secondary {
-        background-color: var(--background-color);
-        border: 2px solid var(--background-color);
-        color: var(--primary-color);
-    }
-    .btn-secondary:hover {
-        background-color: var(--primary-color) !important;
-        color: var(--background-color) !important;
-    }
-
-    section {
-        padding: 3rem 0;
-    }
-    section h2 {
-        text-align: center;
-        margin-bottom: 2rem;
-    }
-    .view-all {
-        display: block;
-        text-align: center;
-        margin-top: 1.5rem;
-        font-weight: bold;
-    }
-
-    .about-summary {
-        text-align: center;
-        background-color: rgba(255, 255, 255, 0.5);
-        border-radius: 12px;
-        padding: 3rem 2rem;
-    }
-
-    .services-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
-        gap: 1.5rem;
-    }
-    .service-card {
-        text-align: center;
-        padding: 2rem 1rem;
-        background-color: rgba(255, 255, 255, 0.5);
-        border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-        transition: transform 0.2s ease;
-    }
-    .service-card:hover {
-        transform: translateY(-4px);
-    }
-    .service-card i {
-        font-size: 2.5rem;
-        margin-bottom: 1rem;
-    }
-    .service-card h3 {
-        margin-bottom: 0.5rem;
-        text-align: center;
-    }
-    .service-card p {
-        margin-bottom: 0;
-    }
-
-    .projects-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 1.5rem;
-    }
-    .project-card {
-        padding: 2rem 1.5rem;
-        background-color: rgba(255, 255, 255, 0.5);
-        border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-        text-align: center;
-    }
-    .project-card h3 {
-        margin-bottom: 0.75rem;
-        text-align: center;
-    }
-    .project-card p {
-        margin-bottom: 1.25rem;
-    }
-
-    .icons-scroll {
-        overflow: hidden;
-        background-color: var(--secondary-color);
-        border-radius: 12px;
-        padding: 1.5rem 0;
-    }
-    .icons-track {
-        display: flex;
-        gap: 3rem;
-        align-items: center;
-        width: max-content;
-        animation: scroll 20s linear infinite;
-    }
-    .icons-track i {
-        font-size: 3rem;
-        color: var(--background-color);
-    }
-
-    @keyframes scroll {
-        0% { transform: translateX(0); }
-        100% { transform: translateX(-50%); }
-    }
-
-    .posts-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 1.5rem;
-    }
-    .post-card {
-        display: flex;
-        flex-direction: column;
-        background-color: rgba(255, 255, 255, 0.5);
-        border-radius: 12px;
-        overflow: hidden;
-        text-decoration: none;
-        color: inherit;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-        transition: box-shadow 0.2s ease, transform 0.2s ease;
-    }
-    .post-card:hover {
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-        transform: translateY(-3px);
-    }
-    .post-thumb {
-        width: 100%;
-        aspect-ratio: 16 / 9;
-        overflow: hidden;
-        background-color: var(--tertiary-color);
-    }
-    .post-thumb img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-    .post-body {
-        padding: 1.25rem;
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-    }
-    .post-body h3 {
-        margin-bottom: 0.5rem;
-    }
-    .post-card:hover .post-body h3 {
-        color: var(--primary-color);
-    }
-    .post-body time {
-        margin-top: auto;
-        color: #666;
-    }
-
-    .contact-cta {
-        text-align: center;
-        background-color: var(--primary-color);
-        border-radius: 12px;
-        padding: 3rem 2rem;
-    }
-    .contact-cta h2 {
-        color: white;
-    }
-    .contact-cta p {
-        color: rgba(255, 255, 255, 0.9);
-        margin-bottom: 1.5rem;
-    }
-    .contact-cta .btn1 {
-        background-color: white;
-        color: var(--primary-color);
-    }
-    .contact-cta .btn1:hover {
-        background-color: var(--secondary-color) !important;
-        color: var(--text-color) !important;
-    }
-
-    @media (max-width: 768px) {
-        .hero { padding: 2rem 1rem; }
-        .avatar { width: 150px; height: 150px; }
-        .services-grid { grid-template-columns: 1fr; }
-        .projects-grid { grid-template-columns: 1fr; }
-        .posts-grid { grid-template-columns: 1fr; }
-        .icons-scroll { padding: 1rem 0; }
-        .icons-track i { font-size: 2.2rem; }
-    }
-</style>
