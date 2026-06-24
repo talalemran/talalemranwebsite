@@ -15,22 +15,7 @@ const recentPosts = (await getCollection('blog'))
     .slice(0, 3);
 ---
 
-<Layout title={pageTitle} description={pageDescription} image="/favicon.jpg">
-
-<script type="application/ld+json" set:html={JSON.stringify({
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Talal Emran",
-  "url": "https://talalemran.netlify.app",
-  "image": "https://talalemran.netlify.app/favicon.jpg",
-  "jobTitle": "Web Designer & Developer",
-  "knowsAbout": ["Web Design", "Web Development", "Graphic Design", "Photography"],
-  "sameAs": [
-    "https://github.com/talalemran",
-    "https://codepen.io/talalemran",
-    "https://x.com/talalemran"
-  ]
-})} /></script>
+<Layout title={pageTitle} description={pageDescription}>
     <Header />
     <div>
         <main>
@@ -50,6 +35,7 @@ const recentPosts = (await getCollection('blog'))
                     <a href="/projects" class="btn1">My Projects</a>
                     <a href="/contact-me" class="btn1 btn-secondary">Contact Me</a>
                 </div>
+            </section>
 
             <section class="about-summary">
                 <h2>About Me</h2>

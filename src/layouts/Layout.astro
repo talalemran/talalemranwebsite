@@ -3,11 +3,9 @@ import '../style/global.css';
 export interface Props {
   title: string;
   description: string;
-  image?: string;
 }
 
-const { title, description, image = '/favicon.jpg' } = Astro.props;
-const url = Astro.url;
+const { title, description } = Astro.props;
 ---
 
 <!doctype html>
@@ -19,21 +17,6 @@ const url = Astro.url;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 		<meta name="description" content={description} />
-		<meta name="author" content="Talal Emran" />
-
-		<meta property="og:title" content={title} />
-		<meta property="og:description" content={description} />
-		<meta property="og:image" content={new URL(image, url)} />
-		<meta property="og:url" content={url} />
-		<meta property="og:type" content="website" />
-
-		<meta name="twitter:card" content="summary_large_image" />
-		<meta name="twitter:title" content={title} />
-		<meta name="twitter:description" content={description} />
-		<meta name="twitter:image" content={new URL(image, url)} />
-
-		<link rel="canonical" href={url} />
-
 		<script src="/js/fontawesome-kit.js" defer></script>
 	</head>
 	<body>
